@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "reportType": "weekly",
+  "date": "2026-11-23",
+  "generatedAt": "2026-11-23T07:30:55Z",
+  "window": {
+    "start": "2026-11-17T00:00:00+08:00",
+    "end": "2026-11-23T15:13:37+08:00"
+  },
+  "status": "complete",
+  "limitations": "",
+  "categories": [
+    {
+      "id": "platform",
+      "status": "updates",
+      "items": [
+        {
+          "id": "tiktok-group-deal-update",
+          "title": "TikTok Shop美国更新直播拼团指南，增加阶梯拼团等说明",
+          "summary": "TikTok Shop美国站11月20日更新直播拼团指南，新增阶梯拼团、虚拟组合装、直播专属商品及多活动并行说明。指南规定单场拼团最长24小时，店铺表现分至少为3.5，关联达人健康分须高于150。",
+          "publishedAt": "2026-11-20",
+          "publicationPrecision": "date",
+          "publicationKind": "substantive_update",
+          "sourceTimezone": null,
+          "subjects": [
+            "TikTok Shop",
+            "美国卖家及达人"
+          ],
+          "source": "TikTok Shop美国Seller Academy",
+          "sourceType": "official",
+          "url": "https://seller-us.tiktok.com/university/essay?default_language=en&knowledge_id=4048337703995157"
+        },
+        {
+          "id": "walmart-fy27-q3-ecommerce",
+          "title": "沃尔玛最新财报：美国电商销售额同比增长23%",
+          "summary": "沃尔玛11月19日公布截至10月31日的2027财年第三季度业绩，美国电商销售额同比增长23%，全球电商增长17%。公司披露门店配送及Marketplace业务继续增长；上述数据为电商整体口径，并非第三方卖家销量增幅。",
+          "publishedAt": "2026-11-19",
+          "publicationPrecision": "date",
+          "publicationKind": "published",
+          "sourceTimezone": null,
+          "subjects": [
+            "Walmart",
+            "美国市场"
+          ],
+          "source": "Walmart投资者关系／官方财报",
+          "sourceType": "official",
+          "url": "https://stock.walmart.com/sec-filings/all-sec-filings/content/0000104169-26-000168/earningsreleasefy27q3.htm"
+        }
+      ]
+    },
+    {
+      "id": "logistics",
+      "status": "updates",
+      "items": [
+        {
+          "id": "belgium-atc-strike-nov23",
+          "title": "比利时空管行动影响11月23日布鲁塞尔航班",
+          "summary": "汉莎集团11月22日公告称，比利时空管罢工将影响23日当地07:00至21:00的空域运行，大部分往返布鲁塞尔机场的航班须取消。公告涉及汉莎集团旗下航司，受影响旅客将收到通知；文件未披露具体货运取消数量。",
+          "publishedAt": "2026-11-22T10:20:00+01:00",
+          "publicationPrecision": "minute",
+          "publicationKind": "published",
+          "sourceTimezone": "欧洲中部时间 UTC+01:00",
+          "subjects": [
+            "比利时空管",
+            "布鲁塞尔机场",
+            "汉莎集团"
+          ],
+          "source": "汉莎集团eXperts运营通知",
+          "sourceType": "official",
+          "url": "https://irreg.lufthansaexperts.com/en/news/flight-disruptions-due-to-an-atc-strike-in-belgium-on-23-november-2026.html"
+        },
+        {
+          "id": "china-north-america-air-rate",
+          "title": "中国至北美空运指数周涨16%，达到9.25美元／公斤",
+          "summary": "Freightos于11月17日发布周报，中国至北美空运指数前一周上涨16%，达到9.25美元／公斤；中国至北欧同期上涨4%。周报称美国空运网络正从空管故障中恢复；上述指数不等同于每票货物的最终报价。",
+          "publishedAt": "2026-11-17T12:13:32+00:00",
+          "publicationPrecision": "minute",
+          "publicationKind": "published",
+          "sourceTimezone": "协调世界时 UTC+00:00",
+          "subjects": [
+            "Freightos",
+            "中国—北美航线",
+            "中国—北欧航线"
+          ],
+          "source": "Freightos官方市场周报",
+          "sourceType": "official",
+          "url": "https://www.freightos.com/freight-resources/us-air-cargo-recovering-from-outage-new-us-cn-tensions-ahead-of-talks-november-17-2026-update/"
+        },
+        {
+          "id": "la-long-beach-watchmen-agreement",
+          "title": "洛杉矶、长滩港保安工会达成临时协议，仍待会员批准",
+          "summary": "11月21日，太平洋海事协会与ILWU Local 26保安工会就洛杉矶、长滩港新合同达成临时协议。协议涉及约250名保安人员，仍须会员批准，现合同在表决期间延长；截至报道发布，最终合同条款及表决日期尚未披露。",
+          "publishedAt": "2026-11-21T14:57:00+00:00",
+          "publicationPrecision": "minute",
+          "publicationKind": "published",
+          "sourceTimezone": "协调世界时 UTC+00:00",
+          "subjects": [
+            "PMA",
+            "ILWU Local 26",
+            "洛杉矶港",
+            "长滩港"
+          ],
+          "source": "FreightWaves（引述PMA声明）",
+          "sourceType": "media",
+          "url": "https://www.freightwaves.com/news/tentative-union-deal-averts-strike-at-port-of-la-long-beach"
+        },
+        {
+          "id": "drewry-wci-nov19",
+          "title": "Drewry海运周报：美线下跌，地中海线部分上涨",
+          "summary": "Drewry于11月19日发布的WCI数据显示，上海至纽约现货运价周降9%至每40尺箱8194美元，至洛杉矶周降5%至7026美元。同期上海至热那亚周涨6%，至鹿特丹持平；综合指数周降3%至4176美元。",
+          "publishedAt": "2026-11-19",
+          "publicationPrecision": "date",
+          "publicationKind": "published",
+          "sourceTimezone": null,
+          "subjects": [
+            "Drewry",
+            "中国—美国航线",
+            "中国—欧洲航线"
+          ],
+          "source": "Drewry World Container Index",
+          "sourceType": "official",
+          "url": "https://www.drewry.co.uk/supply-chain-advisors/world-container-index-assessed-by-drewry"
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "status": "updates",
+      "items": [
+        {
+          "id": "temu-dsa-preliminary-findings",
+          "title": "欧委会对Temu作出新的DSA初步不合规认定",
+          "summary": "欧盟委员会11月17日初步认定，Temu在商品合规检查、内容审核和商家处罚方面的措施不足，未有效降低非法商品销售风险。该结论仍非最终决定，Temu可查阅案卷并答辩；如最终确认违规，罚款上限为全球年营业额的6%。",
+          "publishedAt": "2026-11-17",
+          "publicationPrecision": "date",
+          "publicationKind": "published",
+          "sourceTimezone": null,
+          "subjects": [
+            "欧盟委员会",
+            "Temu",
+            "欧盟市场"
+          ],
+          "source": "欧盟委员会新闻稿IP/26/2463",
+          "sourceType": "official",
+          "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/ip_26_2463/IP_26_2463_EN.pdf"
+        },
+        {
+          "id": "eu-uk-sps-agreement",
+          "title": "英欧公布农食卫生协定安排，仍待完成批准程序",
+          "summary": "欧委会11月20日发布英欧食品及动植物卫生协定问答，拟通过英国对齐相关欧盟卫生规则，减少英国本土与欧盟间相关农食产品的检查和证明。协定仍须完成批准程序，尚未正式生效；其范围不等同于所有商品或关税安排。",
+          "publishedAt": "2026-11-20",
+          "publicationPrecision": "date",
+          "publicationKind": "published",
+          "sourceTimezone": null,
+          "subjects": [
+            "欧盟委员会",
+            "英国政府",
+            "英欧农食产品贸易"
+          ],
+          "source": "欧盟委员会问答QANDA/26/2511",
+          "sourceType": "official",
+          "url": "https://ec.europa.eu/commission/presscorner/api/files/document/print/en/qanda_26_2511/QANDA_26_2511_EN.pdf"
+        }
+      ]
+    },
+    {
+      "id": "market",
+      "status": "updates",
+      "items": [
+        {
+          "id": "uk-october-online-retail",
+          "title": "英国10月线上零售销售额环比增长1.5%",
+          "summary": "英国国家统计局11月20日公布，10月线上零售销售额环比增长1.5%、同比增长9.7%，线上占比由9月的29.1%升至29.2%。统计覆盖大不列颠，不含北爱尔兰；销售额增幅不等同于实物销量增幅。",
+          "publishedAt": "2026-11-20",
+          "publicationPrecision": "date",
+          "publicationKind": "published",
+          "sourceTimezone": null,
+          "subjects": [
+            "英国国家统计局",
+            "大不列颠零售市场"
+          ],
+          "source": "英国国家统计局ONS",
+          "sourceType": "official",
+          "url": "https://www.ons.gov.uk/businessindustryandtrade/retailindustry/bulletins/retailsales/october2026"
+        },
+        {
+          "id": "us-october-retail-sales",
+          "title": "美国10月零售和餐饮销售额环比增长0.2%",
+          "summary": "美国人口普查局11月17日发布10月预估，零售和餐饮服务销售额经季节调整后为7821亿美元，环比增长0.2%、同比增长2.6%。其中非店铺零售销售额同比增长6.1%；该分类不等同于单独统计的电商销售额。",
+          "publishedAt": "2026-11-17T08:30:00-05:00",
+          "publicationPrecision": "minute",
+          "publicationKind": "published",
+          "sourceTimezone": "美国东部标准时间 UTC-05:00",
+          "subjects": [
+            "美国人口普查局",
+            "美国零售及餐饮市场"
+          ],
+          "source": "美国人口普查局Census Bureau",
+          "sourceType": "official",
+          "url": "https://www.census.gov/retail/marts/www/marts_current.pdf"
+        }
+      ]
+    }
+  ]
+}

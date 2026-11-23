@@ -30,11 +30,13 @@
       const heading = el('div', 'category-heading'); const h = el('h3'); h.append(el('span', 'category-number', String(index + 1).padStart(2, '0')), document.createTextNode(cat.title)); heading.append(h, el('span', 'category-en', cat.en)); section.append(heading);
       const data = report?.categories.find(c => c.id === cat.id);
       if (!data?.items.length) {
-        const message = failure ? '内容暂时无法载入，请稍后刷新重试。' : !report ? '首期日报尚未发布，发布后将在此显示。' : data.status === 'unavailable' ? '本板块检索未完成，暂不作“无重要更新”的判断。' : '最近24小时暂无经核实的重要更新。';
+        const message = failure ? '内容暂时无法载入，请稍后刷新重试。' : !report ? '首期日报尚未发布，发布后将在此显示。' : data.status === 'unavailable' ? '本板块检索未完成，暂不作“无重要更新”的判断。' : report.reportType === 'weekly' ? '本周暂无经核实的重要更新。' : '最近24小时暂无经核实的重要更新。';
         section.append(el('div', 'category-empty', message));
       } else data.items.forEach(item => {
         const card = el('article', 'news-card'); card.id = item.id;
-        const meta = el('div', 'card-meta'); meta.append(el('span', 'source-type', item.sourceType === 'official' ? '官方来源' : '媒体报道'), el('span', '', item.source), el('span', 'meta-separator', '·'), el('span', '', `${item.publishedAt.slice(0, 10)} ${item.publishedAt.slice(11, 16)} ${item.sourceTimezone}`));
+        const precision = item.publicationPrecision === 'date' ? `${item.publishedAt}（原文仅标日期）` : `${item.publishedAt.slice(0, 10)} ${item.publishedAt.slice(11, 16)} ${item.sourceTimezone}`;
+        const publishedLabel = item.publicationKind === 'substantive_update' ? '实质更新：' : '发布：';
+        const meta = el('div', 'card-meta'); meta.append(el('span', 'source-type', item.sourceType === 'official' ? '官方来源' : '媒体报道'), el('span', '', item.source), el('span', 'meta-separator', '·'), el('span', '', `${publishedLabel}${precision}`));
         card.append(meta, el('h4', '', item.title), el('p', 'news-summary', item.summary), el('p', 'card-subjects', `涉及主体：${item.subjects.join('、')}`));
         const footer = el('div', 'card-footer'); const original = el('a', 'original-link', '阅读原文 ↗'); original.href = item.url; original.target = '_blank'; original.rel = 'noopener noreferrer'; original.append(el('span', 'original-url', item.url));
         const permalink = el('a', 'permalink', '本条链接 ↗'); permalink.href = `?date=${encodeURIComponent(report.date)}#${encodeURIComponent(item.id)}`;
@@ -46,14 +48,19 @@
   }
   function renderReport(report) {
     state.current = report;
+    const weekly = report.reportType === 'weekly';
+    $('page-title').replaceChildren(document.createTextNode(weekly ? '一周跨境回顾' : '每日跨境速报'), el('span', 'title-dot', '。'));
+    $('content-title').textContent = weekly ? '本周新闻' : '本期新闻';
+    document.querySelector('.content-heading .section-kicker').textContent = weekly ? 'THE WEEKLY REVIEW' : "TODAY'S BRIEF";
     const total = report.categories.reduce((n, c) => n + c.items.length, 0);
     $('edition-date').textContent = report.date.replaceAll('-', '.');
     $('edition-weekday').textContent = new Intl.DateTimeFormat('zh-CN', { timeZone: 'Asia/Shanghai', weekday: 'long' }).format(new Date(`${report.date}T12:00:00+08:00`));
     $('monitor-window').textContent = `${localTime(report.window.start)} 至 ${localTime(report.window.end)} · 北京时间`;
     $('status-dot').classList.toggle('published', report.status === 'complete');
     $('total-count').textContent = `${total} 条`;
-    document.title = `${report.date} · YunShip每日跨境速报`;
-    notice(report.status === 'partial' ? `本期为部分检索结果。${report.limitations}` : '');
+    document.title = `${report.date} · YunShip${weekly ? '一周跨境回顾' : '每日跨境速报'}`;
+    const periodNote = weekly ? '本期为过去一周回顾，按原文发布日期筛选。仅标注日期的来源不补写具体时刻；后续每日速报仍监测最近24小时。' : '';
+    notice(periodNote + (report.status === 'partial' ? `本期为部分检索结果。${report.limitations}` : ''));
     $('latest-button').hidden = report.date === state.editions[0]?.date;
     renderContents(report); renderSections(report);
     $('source-overview').hidden = false;
@@ -110,9 +117,9 @@
       }
       $('edition-select').replaceChildren(); $('archive-list').replaceChildren(); $('edition-select').disabled = false;
       for (const entry of state.editions) {
-        const option = el('option', '', `${entry.date} · ${entry.total}条`); option.value = entry.date; $('edition-select').append(option);
+        const option = el('option', '', `${entry.date}${entry.reportType === 'weekly' ? ' · 周回顾' : ''} · ${entry.total}条`); option.value = entry.date; $('edition-select').append(option);
         const link = el('a', 'archive-item'); link.href = `?date=${entry.date}`; link.dataset.date = entry.date;
-        const label = el('span', '', entry.date); label.append(el('small', '', `${entry.total}条新闻${entry.status === 'partial' ? ' · 部分检索' : ''}`)); link.append(label, el('span', '', '↗'));
+        const label = el('span', '', entry.date); label.append(el('small', '', `${entry.reportType === 'weekly' ? '周回顾 · ' : ''}${entry.total}条新闻${entry.status === 'partial' ? ' · 部分检索' : ''}`)); link.append(label, el('span', '', '↗'));
         link.addEventListener('click', event => { if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.button !== 0) return; event.preventDefault(); selectEdition(entry.date, true).then(() => $('main').scrollIntoView()).catch(showFailure); });
         $('archive-list').append(link);
       }
