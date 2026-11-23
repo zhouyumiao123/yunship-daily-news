@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#b5252e">
+  <meta name="description" content="YunShip每日跨境速报。关注平台动态、物流与供应链、合规与政策、市场与行业趋势，附原始信息来源。">
+  <meta property="og:title" content="YunShip每日跨境速报">
+  <meta property="og:description" content="跨境行业每日信息简报 · 原文可查 · 按日归档">
+  <meta property="og:type" content="website">
+  <title>YunShip每日跨境速报</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./style.css">
+  <script type="application/json" id="edition-bootstrap">{"index":{"schemaVersion":1,"editions":[]},"reports":[]}</script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到日报内容</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="./" aria-label="YunShip每日跨境速报首页"><span class="brand-mark">YunShip<span class="brand-dot">.</span></span><span class="brand-rule"></span><span class="brand-sub">跨境行业简报</span></a>
+      <nav class="header-nav" aria-label="页面导航"><a href="#archive">历史日报 <span aria-hidden="true">↗</span></a><button class="share-button" id="share-top" type="button">分享本期 <span aria-hidden="true">↗</span></button></nav>
+    </div>
+  </header>
+  <main id="main" class="shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="red-line"></span> YUNSHIP DAILY BRIEF</p>
+        <h1 id="page-title">每日跨境速报<span class="title-dot">。</span></h1>
+        <p class="hero-description">平台、物流、政策与市场。<br class="mobile-break">集中阅读跨境行业的重要变化。</p>
+      </div>
+      <div class="edition-box"><p class="edition-label">本期日期 <span>BEIJING TIME</span></p><p class="edition-date" id="edition-date">—</p><p class="edition-weekday" id="edition-weekday">每日信息，按日归档</p></div>
+    </section>
+    <section class="report-bar" aria-label="日报监测信息">
+      <div class="window"><span class="status-dot" id="status-dot"></span><span id="monitor-window">正在读取日报记录…</span></div>
+      <div class="edition-tools"><label for="edition-select">查看日期</label><select id="edition-select" disabled><option>暂无已发布日报</option></select><button id="latest-button" type="button" hidden>最新一期</button></div>
+    </section>
+    <div class="reading-layout">
+      <aside class="sidebar" aria-label="阅读辅助">
+        <p class="side-label">本期目录</p>
+        <nav id="contents" class="contents" aria-label="新闻板块"></nav>
+        <div class="side-note"><span class="note-line"></span><p>只记录可核实的变化。</p><p>原始来源随文附上，<br>发布日期与生效日期分开说明。</p></div>
+      </aside>
+      <div class="report-content">
+        <div class="content-heading"><div><span class="section-kicker">TODAY'S BRIEF</span><h2 id="content-title">本期新闻</h2></div><span class="total-count" id="total-count">— 条</span></div>
+        <div id="report-notice" class="report-notice" role="status" hidden></div>
+        <div id="news-sections" aria-busy="true"><div class="initial-state">正在读取已发布的日报…</div></div>
+        <section class="source-overview" id="source-overview" hidden><span class="section-kicker">SOURCES</span><h2>本期信息来源</h2><div id="source-summary"></div><p class="source-principle">优先采用官方公告及原始数据，可靠媒体作为补充。相同事件合并收录，每条新闻保留对应原文链接。</p></section>
+      </div>
+    </div>
+    <section id="archive" class="archive" aria-labelledby="archive-title"><div><span class="section-kicker">THE ARCHIVE</span><h2 id="archive-title">历史日报</h2><p>按日期回看，每一期均有独立分享链接。</p></div><div id="archive-list" class="archive-list"><p class="muted">暂无已发布日报。</p></div></section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span class="footer-brand">YunShip <span>每日跨境速报</span></span><p>时间口径：北京时间 UTC+8。原始报道及公告以其发布机构为准。</p><a href="#page-title">返回顶部 ↑</a></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+  <dialog id="share-dialog"><h2>分享本期日报</h2><p>复制下方链接即可分享。</p><label for="share-url" class="sr-only">本期链接</label><input id="share-url" readonly><form method="dialog"><button class="share-button">关闭</button></form></dialog>
+  <noscript><div class="noscript">此页面需要启用JavaScript以读取日报。也可查看网站的 data/index.json 获取已发布目录。</div></noscript>
+</body>
+</html>
